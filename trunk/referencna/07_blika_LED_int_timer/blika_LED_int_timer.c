@@ -36,8 +36,9 @@ int main(void)
 	init_terminal();
 	printf("\n\r---\n\rZadaj polovicu periody blikania LED v microsekundach,\n\rcize cislo 0..4194304 usec.\n\rPresnost je 1/15625-tina sec, cize 64 usec: ");
 	scanf("%lu", &pol_periody);
+	if (pol_periody > 4194304) pol_periody = 4194304;
 	uint16_t delay = (uint16_t)(pol_periody / 64);
-	printf("\n\rpol periody %lu usec, cize %u pulzov casovaca\n\r", pol_periody, delay);
+	printf("\n\rpol periody %lu usec, cize %u pulzov casovaca\n\r", pol_periody, delay - 1);
 	
 	init_timer(delay);
 	
