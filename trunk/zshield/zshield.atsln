@@ -12,6 +12,10 @@ EndProject
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "XX_TestProject", "XX_ZenitTestProject\XX_TestProject.cproj", "{8731D65A-9E4C-433B-9855-B98EBEF74A00}"
 EndProject
 Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AVR = Debug|AVR
 		Release|AVR = Release|AVR
