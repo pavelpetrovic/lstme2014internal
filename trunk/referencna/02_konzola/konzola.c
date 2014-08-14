@@ -44,7 +44,7 @@ int main(void)
 	
 	while (1)
 	{
-		printf("Hello, my name may not be pronounced (You-Know-Who).r\n");
+		printf("Hello, my name may not be pronounced (You-Know-Who).\r\n");
 		printf("What's your name? ");
 		scanf("%s&n", his_name);												
 		printf("\n\rNice to meet you, %s\n\r", his_name);
