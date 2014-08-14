@@ -26,6 +26,10 @@ EndProject
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "11_avr_with_pc", "11_avr_with_pc\avr\11_avr_with_pc.cproj", "{0D29A7D9-E4E7-468D-B068-898678061177}"
 EndProject
 Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AVR = Debug|AVR
 		Release|AVR = Release|AVR
