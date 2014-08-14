@@ -26,16 +26,16 @@ int main(void)
 {
 	float pol_periody;
 	
-	DDRB = 32;  // LED on PB5
+	DDRB = (1 << 5);  // LED on PB5
 	
 	init_terminal();
 	printf("\n\r---\n\rZadaj polovicu periody blikania LED v sekundach\n\rcize cislo 0..4.194304 sec.\n\rpresnost je 1/15625-tina sec, cize 0.000064 sec.\n\rpol periody: ");
 	scanf("%f", &pol_periody);
-	if (pol_periody > 4.194394) pol_periody = 4.194394;
+	if (pol_periody > 4.194304) pol_periody = 4.194304;
 	if (pol_periody < 0.0) pol_periody = 0.0;
 	
 	uint16_t delay = (uint16_t)(pol_periody * (float)15625.0);
-	printf("\n\rpol periody %f s, cize %u pulzov casovaca\n\r", pol_periody, delay);
+	printf("\n\rpol periody %f s, cize %u pulzov casovaca\n\r", pol_periody, delay - 1);
 	
 	init_timer(delay);
 	
