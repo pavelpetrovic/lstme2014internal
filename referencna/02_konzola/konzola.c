@@ -44,15 +44,16 @@ int main(void)
 	
 	while (1)
 	{
-		printf("Hello, my name may not be pronounced.\r\n");
+		printf("Hello, my name may not be pronounced (You-Know-Who).r\n");
 		printf("What's your name? ");
 		scanf("%s&n", his_name);												
 		printf("\n\rNice to meet you, %s\n\r", his_name);
+		guess = 0;
 	
 		while(1)
 		{
     		printf("What's your guess [1-100]? ");
-			scanf("%d&n", &guess);
+			if (0 == scanf("%d&n", &guess)) scanf("%*s&n");
 			if (guess == 42) break;
 			printf("\n\r%d? Nope. Try again.\r\n", guess);
 		}
